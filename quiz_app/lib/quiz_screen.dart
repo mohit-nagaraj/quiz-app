@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/styled_text.dart';
 
 class QuizScreen extends StatefulWidget {
   const QuizScreen({super.key});
@@ -11,6 +12,6 @@ class QuizScreen extends StatefulWidget {
 class _QuizScreen extends State<QuizScreen> {
   @override
   Widget build(context) {
-    return const Text('quizes');
+    return StyledText.dflt('Quizes');
   }
 }
