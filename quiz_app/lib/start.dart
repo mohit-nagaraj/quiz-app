@@ -40,7 +40,6 @@ class StartScreen extends StatelessWidget {
           icon: const Icon(
             Icons.arrow_right_rounded,
             color: Colors.black,
-            opticalSize: 100,
           ),
         )
       ],
