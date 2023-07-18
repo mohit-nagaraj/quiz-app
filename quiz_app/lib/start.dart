@@ -24,18 +24,23 @@ class StartScreen extends StatelessWidget {
         const SizedBox(
           height: 35,
         ),
-        ElevatedButton(
+        ElevatedButton.icon(
           onPressed: () {},
           style: ElevatedButton.styleFrom(
             backgroundColor: Colors.white,
             padding: const EdgeInsets.all(12),
           ),
-          child: const Text(
+          label: const Text(
             'Start quiz',
             style: TextStyle(
               fontSize: 20,
               color: Colors.black,
             ),
+          ),
+          icon: const Icon(
+            Icons.arrow_right_rounded,
+            color: Colors.black,
+            opticalSize: 100,
           ),
         )
       ],
