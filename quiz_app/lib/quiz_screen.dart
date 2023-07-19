@@ -15,19 +15,23 @@ class _QuizScreen extends State<QuizScreen> {
   final currentQuestion = questions[0];
   @override
   Widget build(context) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-        StyledText.dflt(currentQuestion.text),
-        const SizedBox(height: 20),
-        ...currentQuestion.answers.map((option) {
-          return Padding(
-            padding: const EdgeInsets.only(top: 8, bottom: 8),
-            child: StyledButton(option, () {}),
-          );
-        })
-      ],
+    return Container(
+      //used a container to add a margin
+      margin: const EdgeInsets.all(40),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          StyledText.dflt(currentQuestion.text),
+          const SizedBox(height: 20),
+          ...currentQuestion.answers.map((option) {
+            return Padding(
+              padding: const EdgeInsets.only(top: 8, bottom: 8),
+              child: StyledButton(option, () {}),
+            );
+          })
+        ],
+      ),
     );
   }
 }

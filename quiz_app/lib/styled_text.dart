@@ -13,6 +13,7 @@ class StyledText extends StatelessWidget {
         color: c,
         fontSize: 30,
       ),
+      textAlign: TextAlign.center,
     );
   }
 }
