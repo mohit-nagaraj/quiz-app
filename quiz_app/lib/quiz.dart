@@ -18,6 +18,7 @@ class _QuizState extends State<Quiz> {
   void switchScreen() {
     setState(() {
       activeScreen = 'quizscreen';
+      chosenAnswer = [];
     });
   }
 
@@ -26,7 +27,6 @@ class _QuizState extends State<Quiz> {
     if (chosenAnswer.length == questions.length) {
       setState(() {
         activeScreen = 'resultscreen';
-        chosenAnswer = [];
       });
     }
   }
@@ -45,7 +45,10 @@ class _QuizState extends State<Quiz> {
       home: Scaffold(
         backgroundColor: Colors.black,
         body: Center(
-          child: activeWidget,
+          child: Container(
+            constraints: const BoxConstraints(maxWidth: 720),
+            child: activeWidget,
+          ),
         ),
       ),
     );
