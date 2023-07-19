@@ -20,7 +20,7 @@ class StartScreen extends StatelessWidget {
           'Learn flutter the easy way',
           style: TextStyle(
             color: Colors.white,
-            fontSize: 16,
+            fontSize: 18,
           ),
         ),
         const SizedBox(
@@ -30,11 +30,17 @@ class StartScreen extends StatelessWidget {
           onPressed: changeState,
           style: ElevatedButton.styleFrom(
             backgroundColor: Colors.white,
-            padding: const EdgeInsets.all(12),
+            padding: const EdgeInsets.only(
+              top: 12,
+              bottom: 12,
+              right: 12,
+              left: 0,
+            ),
           ),
           label: StyledText('Start Quiz', Colors.black),
           icon: const Icon(
             Icons.arrow_right_rounded,
+            size: 35,
             color: Colors.black,
           ),
         )
