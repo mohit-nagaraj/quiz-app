@@ -27,6 +27,7 @@ class StyledButton extends StatelessWidget {
           fontSize: 24,
           color: Colors.black,
         ),
+        textAlign: TextAlign.center,
       ),
     );
   }

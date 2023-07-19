@@ -4,7 +4,8 @@ import 'package:quiz_app/styled_text.dart';
 import 'data/questions.dart';
 
 class QuizScreen extends StatefulWidget {
-  const QuizScreen({super.key});
+  const QuizScreen(this.onSelectAnswer, {super.key});
+  final void Function(String ans) onSelectAnswer;
   @override
   State<QuizScreen> createState() {
     return _QuizScreen();
@@ -12,9 +13,19 @@ class QuizScreen extends StatefulWidget {
 }
 
 class _QuizScreen extends State<QuizScreen> {
-  final currentQuestion = questions[0];
+  int currentQuestionIndex = 0;
+
+  void answerQuestion(String ans) {
+    widget.onSelectAnswer(ans);
+    setState(() {
+      currentQuestionIndex += 1;
+    });
+  }
+
   @override
   Widget build(context) {
+    final currentQuestion = questions[currentQuestionIndex];
+
     return Container(
       //used a container to add a margin
       margin: const EdgeInsets.all(40),
@@ -27,7 +38,9 @@ class _QuizScreen extends State<QuizScreen> {
           ...currentQuestion.shuffleAnswers().map((option) {
             return Padding(
               padding: const EdgeInsets.only(top: 8, bottom: 8),
-              child: StyledButton(option, () {}),
+              child: StyledButton(option, () {
+                answerQuestion(option);
+              }),
             );
           })
         ],

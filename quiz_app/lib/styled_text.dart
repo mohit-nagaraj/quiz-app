@@ -12,6 +12,7 @@ class StyledText extends StatelessWidget {
       style: TextStyle(
         color: c,
         fontSize: 30,
+        fontFamily: 'Nunito',
       ),
       textAlign: TextAlign.center,
     );
