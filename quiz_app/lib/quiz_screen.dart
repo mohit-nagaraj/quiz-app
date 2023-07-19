@@ -24,7 +24,7 @@ class _QuizScreen extends State<QuizScreen> {
         children: [
           StyledText.dflt(currentQuestion.text),
           const SizedBox(height: 20),
-          ...currentQuestion.answers.map((option) {
+          ...currentQuestion.shuffleAnswers().map((option) {
             return Padding(
               padding: const EdgeInsets.only(top: 8, bottom: 8),
               child: StyledButton(option, () {}),
