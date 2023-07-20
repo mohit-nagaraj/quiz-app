@@ -5,8 +5,10 @@ import 'package:quiz_app/data/questions.dart';
 import 'package:quiz_app/result_summary.dart';
 
 class ResultScreen extends StatelessWidget {
-  const ResultScreen(this.chosenAns, this.changeState, {super.key});
+  const ResultScreen(this.chosenAns, this.changeState, this.homeScreen,
+      {super.key});
   final void Function() changeState;
+  final void Function() homeScreen;
 
   final List<String> chosenAns;
 

@@ -15,11 +15,11 @@ class ResultSummary extends StatelessWidget {
               height: 30,
               decoration: BoxDecoration(
                 color: (data['user_answer'] != data['correct_answer'])
-                    ? Color.fromARGB(255, 163, 57, 57)
-                    : Color.fromARGB(255, 78, 164, 81),
+                    ? const Color.fromARGB(255, 163, 57, 57)
+                    : const Color.fromARGB(255, 78, 164, 81),
                 borderRadius: BorderRadius.circular(100),
               ),
-              alignment: Alignment.topCenter,
+              alignment: Alignment.center,
               child: Text(
                 ((data['question_index'] as int) + 1).toString(),
                 style: const TextStyle(
